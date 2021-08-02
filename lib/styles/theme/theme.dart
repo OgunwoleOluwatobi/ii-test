@@ -7,7 +7,7 @@ ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   backgroundColor: const Color(0xFF212121),
   accentColor: Colors.white,
-  fontFamily: 'Cera-Pro',
+  fontFamily: 'MontserratA',
   iconTheme: IconThemeData(
     color: Colors.white
   ),
@@ -41,7 +41,7 @@ ThemeData lightTheme = ThemeData(
   iconTheme: IconThemeData(
     color: Colors.white
   ),
-  fontFamily: 'CeraPro',
+  fontFamily: 'MontserratA',
   dividerColor: Colors.black12,
   cardColor: Colors.white54
   // accentColor: Colors.black,

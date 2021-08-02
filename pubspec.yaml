@@ -36,7 +36,7 @@ dependencies:
   hive_flutter: null
   intl: ^0.17.0
   logger: ^1.0.0
-  mockito: ^5.0.9
+  mockito: ^5.0.13
   shimmer: ^2.0.0
   stacked: ^2.1.6
   stacked_hooks: ^0.2.0

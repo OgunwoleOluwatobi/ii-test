@@ -8,15 +8,23 @@ import 'package:ii_test/core/models/user_list_response.dart';
 import 'package:ii_test/core/services/user_service.dart';
 import 'package:ii_test/core/utils/hive_boxes.dart';
 import 'package:ii_test/core/utils/logger.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-class MockUserService extends Mock implements UserService {}
+import 'startup_test.mocks.dart';
 
-class MockHive extends Mock implements HiveInterface {}
-class MockRegistry extends Mock implements TypeRegistry {}
+// class MockUserService extends Mock implements UserService {}
 
-class MockBox<T> extends Mock implements Box<T> {}
+// class MockHive extends Mock implements HiveInterface {}
+// class MockRegistry extends Mock implements TypeRegistry {}
 
+// class MockBox<T> extends Mock implements Box<T> {}
+
+@GenerateMocks([
+  HiveInterface,
+  Box,
+  UserService
+])
 void main() {
   test('Setup is working', () async{
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +36,7 @@ void main() {
 
     final userMockBox = MockBox<User>();
 
-    final mockhive = MockHive();
+    final mockhive = MockHiveInterface();
 
     when(mockhive.isBoxOpen(HiveBox.user)).thenAnswer((_) => false);
 

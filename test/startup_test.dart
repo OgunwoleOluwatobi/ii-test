@@ -17,12 +17,6 @@ class MockRegistry extends Mock implements TypeRegistry {}
 
 class MockBox<T> extends Mock implements Box<T> {}
 
-void initialiseHive() async {
-  var path = Directory.current.path;
-  Hive
-    ..init(path);
-}
-
 void main() {
   test('Setup is working', () async{
     TestWidgetsFlutterBinding.ensureInitialized();
